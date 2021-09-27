@@ -90,6 +90,9 @@ function vpn_menu() {
 	D|d) # creat e prompt for the user
 		# Call the manage-user.bash and pass the proper switch and argument
 		# to delete the user.
+		echo "What is the name of the person you wish to delete?"
+		read t_user
+		bash manage-users.bash -d -u ${t_user}
 		
 	;;
 	B|b) admin_menu
